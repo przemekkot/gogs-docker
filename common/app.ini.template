@@ -1,0 +1,51 @@
+APP_NAME = Gogs: Go Git Service
+RUN_USER = git
+RUN_MODE = prod
+
+[database]
+DB_TYPE = ${MGOGS_DB_TYPE}
+HOST = ${MGOGS_DB_HOST}
+NAME = ${MGOGS_DB_NAME}
+USER = ${MGOGS_DB_USER}
+PASSWD = ${MGOGS_DB_PASSWORD}
+SSL_MODE = disable
+PATH = /gogs/volume/gogs/data/gogs.db
+
+[repository]
+ROOT = /gogs/volume/gogs/gogs-repositories
+
+[server]
+DOMAIN = localhost
+HTTP_PORT = 3000
+ROOT_URL = http://localhost:3000/
+DISABLE_SSH = true
+OFFLINE_MODE = false
+
+[mailer]
+ENABLED = false
+
+[service]
+REGISTER_EMAIL_CONFIRM = false
+ENABLE_NOTIFY_MAIL = false
+DISABLE_REGISTRATION = false
+ENABLE_CAPTCHA = true
+REQUIRE_SIGNIN_VIEW = true
+
+[picture]
+DISABLE_GRAVATAR = false
+AVATAR_UPLOAD_PATH = /gogs/volume/gogs/data/avatars
+
+[session]
+PROVIDER = file
+PROVIDER_CONFIG = /gogs/volume/gogs/data/sessions
+
+[log]
+MODE = console
+LEVEL = Info
+
+[security]
+INSTALL_LOCK = true
+SECRET_KEY = ${MGOGS_SECRET_KEY}
+
+[attachment]
+PATH = /gogs/volume/gogs/data/attachment
