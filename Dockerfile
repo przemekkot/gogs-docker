@@ -48,6 +48,7 @@ RUN mkdir /gogs/volume \
 VOLUME /gogs/volume
 EXPOSE 3000
 
+ENV HOME /gogs
 USER 1001
 ENV USER git
 CMD [ "/gogs/docker-scripts/run.sh" ]
