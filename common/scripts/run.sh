@@ -52,4 +52,5 @@ export MGOGS_SECRET_KEY="${GOGS_SECRET_KEY:-$(cat /dev/urandom | tr -dc 'a-zA-Z0
 
 init
 
-/gogs/gogs web
+cd /gogs
+./gogs web

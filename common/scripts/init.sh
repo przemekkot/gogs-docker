@@ -75,6 +75,7 @@ init_db () {
 
 init_dirs () {
   mkdir -p "${DIR}/../volume/gogs"
+  ln -sf `realpath "${DIR}/../volume/gogs/data"` "${DIR}/../data"
 }
 
 init_conf () {
